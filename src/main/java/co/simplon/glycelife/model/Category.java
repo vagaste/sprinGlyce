@@ -1,12 +1,19 @@
 package co.simplon.glycelife.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +30,9 @@ public class Category {
 	
 	@Column(name = "NAME")
 	private String name;
+	
+	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)	
+	private List<Aliment> aliments = new ArrayList<>();
 	
 	public Category() {
 		
@@ -52,4 +62,13 @@ public class Category {
 	public void setName(String name) {
 		this.name= name;
 	}
+	public List<Aliment> getAliments() {
+		return aliments;
+	}
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", nb d'aliments= " + aliments.size() + "]";
+	}
+	
+	
 }
