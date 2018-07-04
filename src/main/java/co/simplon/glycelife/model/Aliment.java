@@ -11,50 +11,70 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ALIMENT")
+@Table(name = "ALIMENT")
 public class Aliment {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "ID")
 	private Long id;
-	
-	@Column(name="NAME")
+
+	@Column(name = "NAME")
 	private String name;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name= "fk_idcategory")
+	@JoinColumn(name = "fk_idcategory")
 	private Category category;
-	
-	@Column(name="ENERGY")
+
+	@Column(name = "ENERGY")
 	private int energy;
-	
-	@Column(name="IG")
+
+	@Column(name = "IG")
 	private int ig;
-	
-	@Column(name="PROTEIN")
+
+	@Column(name = "PROTEIN")
 	private double protein;
-	
-	@Column(name="CARB")
+
+	@Column(name = "CARB")
 	private double carb;
-	
-	@Column(name="SUGAR")
+
+	@Column(name = "SUGAR")
 	private double sugar;
-	
-	@Column(name="LIPID")
+
+	@Column(name = "LIPID")
 	private double lipid;
-	
-	@Column(name="FIBRE")
+
+	@Column(name = "FIBRE")
 	private double fibre;
-	
-	@Column(name="SALT")
+
+	@Column(name = "SALT")
 	private double salt;
-	
-	@Column(name="CG")
+
+	@Column(name = "CG")
 	private double cg;
 
 	public Aliment() {
-		super();
+	}
+
+	public Aliment(String name, Category category, int energy, int ig, double protein, double carb, double sugar,
+			double lipid, double fibre, double salt, double cg) {
+		this(null, name, category, energy, ig, protein, carb, sugar, lipid, fibre, salt, cg);
+	}
+
+	public Aliment(Long id, String name, Category category, int energy, int ig, double protein, double carb,
+			double sugar, double lipid, double fibre, double salt, double cg) {
+		this.id = id;
+		this.name = name;
+		this.category = category;
+		this.energy = energy;
+		this.ig = ig;
+		this.protein = protein;
+		this.carb = carb;
+		this.sugar = sugar;
+		this.lipid = lipid;
+		this.fibre = fibre;
+		this.salt = salt;
+		this.cg = cg;
 	}
 
 	public Long getId() {
@@ -155,7 +175,5 @@ public class Aliment {
 				+ ", carb=" + carb + ", sugar=" + sugar + ", lipid=" + lipid + ", fibre=" + fibre + ", salt=" + salt
 				+ ", cg=" + cg + ", Category= " + category.getName() + "]";
 	}
-	
-	
-	
+
 }

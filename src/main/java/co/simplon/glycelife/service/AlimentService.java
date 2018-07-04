@@ -10,12 +10,12 @@ import co.simplon.glycelife.model.Aliment;
 public interface AlimentService {
 
 	public List<Aliment> getAll();
-	
-	public List<Aliment> findByName(String name);
-	
-	public List<Aliment> findByCategoryId(Long id );
-	
-	public List<Aliment> findByEnergy(double energy);
-	
-	public List<Aliment> findByIg(int ig);
+
+	public List<Aliment> getByName(String name);
+
+	public List<Aliment> getByCategoryId(Long id);
+
+	public List<Aliment> getByEnergyRange(int energyMin, int energyMax);
+
+	public List<Aliment> getByIg(int igMin, int igMax);
 }
