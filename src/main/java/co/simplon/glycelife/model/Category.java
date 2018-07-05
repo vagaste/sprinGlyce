@@ -10,15 +10,12 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "category")
-@NamedQueries({ @NamedQuery(name = "Category.findAll", query = " SELECT c FROM Category ORDER BY c.name "),
-		@NamedQuery(name = "Category.findById", query = " SELECT c FROM Category WHERE c.id = :id") })
+
 public class Category {
 
 	@Id
