@@ -10,7 +10,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -18,57 +17,62 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "category")
-@NamedQueries({
-	@NamedQuery(name = "Category.findAll", query = " SELECT c FROM Category ORDER BY c.name "),
-	@NamedQuery(name = "Category.findById", query = " SELECT c FROM Category WHERE c.id = :id") })
+@NamedQueries({ @NamedQuery(name = "Category.findAll", query = " SELECT c FROM Category ORDER BY c.name "),
+		@NamedQuery(name = "Category.findById", query = " SELECT c FROM Category WHERE c.id = :id") })
 public class Category {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "ID")
 	private Long id;
-	
+
 	@Column(name = "NAME")
 	private String name;
-	
-	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)	
+
+	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Aliment> aliments = new ArrayList<>();
-	
+
 	public Category() {
-		
+
 	}
+
 	public Category(long id) {
-		this.id= id;
+		this.id = id;
 	}
 
 	public Category(String name) {
-		this.name= name;
+		this.name = name;
 	}
+
 	public Category(long id, String name) {
-		this.id= id;
-		this.name= name;
+		this.id = id;
+		this.name = name;
 	}
-	
+
 	public Long getId() {
 		// TODO Auto-generated method stub
 		return id;
 	}
+
 	public void setId(Long id) {
-		this.id= id;
+		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
-		this.name= name;
+		this.name = name;
 	}
+
 	public List<Aliment> getAliments() {
 		return aliments;
 	}
+
 	@Override
 	public String toString() {
 		return "Category [id=" + id + ", name=" + name + ", nb d'aliments= " + aliments.size() + "]";
 	}
-	
-	
+
 }
