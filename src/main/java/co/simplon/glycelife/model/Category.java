@@ -1,3 +1,4 @@
+
 package co.simplon.glycelife.model;
 
 import java.util.ArrayList;
