@@ -1,10 +1,10 @@
-package co.simplon.glycelife.service;
+package co.simplon.glycelife.app.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import co.simplon.glycelife.model.Aliment;
+import co.simplon.glycelife.app.model.Aliment;
 
 @Service
 public interface AlimentService {

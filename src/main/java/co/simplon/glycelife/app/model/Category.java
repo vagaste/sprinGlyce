@@ -1,4 +1,4 @@
-package co.simplon.glycelife.model;
+package co.simplon.glycelife.app.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "category")
-@NamedQueries({ @NamedQuery(name = "Category.findAll", query = " SELECT c FROM Category ORDER BY c.name "),
-		@NamedQuery(name = "Category.findById", query = " SELECT c FROM Category WHERE c.id = :id") })
+@NamedQueries({ @NamedQuery(name = "Category.findAll", query = " SELECT c FROM Category c ORDER BY c.name "),
+		@NamedQuery(name = "Category.findById", query = " SELECT c FROM Category c WHERE c.id = :id") })
 public class Category {
 
 	@Id

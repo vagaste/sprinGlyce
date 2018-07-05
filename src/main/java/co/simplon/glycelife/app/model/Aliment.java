@@ -1,4 +1,4 @@
-package co.simplon.glycelife.model;
+package co.simplon.glycelife.app.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

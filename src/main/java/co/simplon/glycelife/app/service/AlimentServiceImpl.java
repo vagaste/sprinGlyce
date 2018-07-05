@@ -1,19 +1,20 @@
-package co.simplon.glycelife.service;
+package co.simplon.glycelife.app.service;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.springframework.stereotype.Service;
 
-import co.simplon.glycelife.model.Aliment;
-import co.simplon.glycelife.repo.AlimentRepo;
+import co.simplon.glycelife.app.model.Aliment;
+import co.simplon.glycelife.app.repo.AlimentRepo;
 
 @Service
 public class AlimentServiceImpl implements AlimentService {
 
-	@Inject
 	private AlimentRepo alimentRepo;
+
+	public AlimentServiceImpl(AlimentRepo alimentRepo) {
+		this.alimentRepo = alimentRepo;
+	}
 
 	@Override
 	public List<Aliment> getAll() {
@@ -32,12 +33,12 @@ public class AlimentServiceImpl implements AlimentService {
 
 	@Override
 	public List<Aliment> getByEnergyRange(int energyMin, int energyMax) {
-		return alimentRepo.findByEnergy(energyMin, energyMax);
+		return alimentRepo.findByEnergyBetween(energyMin, energyMax);
 	}
 
 	@Override
 	public List<Aliment> getByIg(int igMin, int igMax) {
-		return alimentRepo.findByIg(igMin, igMax);
+		return alimentRepo.findByIgBetween(igMin, igMax);
 	}
 
 }

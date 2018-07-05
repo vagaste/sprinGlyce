@@ -1,26 +1,25 @@
-package co.simplon.glycelife.controller;
+package co.simplon.glycelife.app.controller;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import co.simplon.glycelife.model.Aliment;
-import co.simplon.glycelife.service.AlimentService;
+import co.simplon.glycelife.app.model.Aliment;
+import co.simplon.glycelife.app.service.AlimentService;
 
-@Controller
+@RestController
 @RequestMapping("/aliment")
 public class AlimentController {
 
-	@Inject
 	private AlimentService alimentService;
 
-	@RequestMapping(method = RequestMethod.GET)
-	@ResponseBody
+	public AlimentController(AlimentService alimentService) {
+		this.alimentService = alimentService;
+	}
+
+	@GetMapping
 	public List<Aliment> displayAll() {
 		return alimentService.getAll();
 	}
