@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 @Entity
 @Table(name = "category")
 public class Category {
@@ -25,6 +27,7 @@ public class Category {
 	@Column(name = "NAME")
 	private String name;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Aliment> aliments = new ArrayList<>();
 
@@ -64,6 +67,10 @@ public class Category {
 
 	public List<Aliment> getAliments() {
 		return aliments;
+	}
+
+	public void setAliments(List<Aliment> aliments) {
+		this.aliments = aliments;
 	}
 
 	@Override
