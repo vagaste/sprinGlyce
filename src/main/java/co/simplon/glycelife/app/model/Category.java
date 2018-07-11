@@ -27,8 +27,8 @@ public class Category {
 	@Column(name = "NAME")
 	private String name;
 
-	@JsonIgnore
 	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JsonIgnore
 	private List<Aliment> aliments = new ArrayList<>();
 
 	public Category() {
