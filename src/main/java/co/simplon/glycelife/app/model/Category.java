@@ -21,10 +21,10 @@ public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "ID")
+	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "NAME")
+	@Column(name = "name")
 	private String name;
 
 	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

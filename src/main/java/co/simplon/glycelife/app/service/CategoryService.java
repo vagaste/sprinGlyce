@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import co.simplon.glycelife.app.model.Category;
 
 @Service
-
 public interface CategoryService {
 
 	public List<Category> getAll();

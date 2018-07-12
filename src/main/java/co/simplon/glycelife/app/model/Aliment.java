@@ -1,56 +1,65 @@
 package co.simplon.glycelife.app.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ALIMENT")
+@Table(name = "aliment")
 public class Aliment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "ID")
+	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "NAME")
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "energy")
+	private int energy;
+
+	@Column(name = "ig")
+	private int ig;
+
+	@Column(name = "protein")
+	private double protein;
+
+	@Column(name = "carb")
+	private double carb;
+
+	@Column(name = "sugar")
+	private double sugar;
+
+	@Column(name = "lipid")
+	private double lipid;
+
+	@Column(name = "fibre")
+	private double fibre;
+
+	@Column(name = "salt")
+	private double salt;
+
+	@Column(name = "cg")
+	private double cg;
 
 	@ManyToOne
 	@JoinColumn(name = "fk_idcategory")
 	private Category category;
 
-	@Column(name = "ENERGY")
-	private int energy;
-
-	@Column(name = "IG")
-	private int ig;
-
-	@Column(name = "PROTEIN")
-	private double protein;
-
-	@Column(name = "CARB")
-	private double carb;
-
-	@Column(name = "SUGAR")
-	private double sugar;
-
-	@Column(name = "LIPID")
-	private double lipid;
-
-	@Column(name = "FIBRE")
-	private double fibre;
-
-	@Column(name = "SALT")
-	private double salt;
-
-	@Column(name = "CG")
-	private double cg;
+	@OneToMany(mappedBy = "aliment", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Portion> portions = new ArrayList<>();
 
 	public Aliment() {
 	}
