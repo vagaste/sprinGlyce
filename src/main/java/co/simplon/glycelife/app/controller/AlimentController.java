@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import co.simplon.glycelife.app.model.Aliment;
 import co.simplon.glycelife.app.service.AlimentService;
 
-@CrossOrigin(origins = "http://localhost/4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/aliment")
 public class AlimentController {

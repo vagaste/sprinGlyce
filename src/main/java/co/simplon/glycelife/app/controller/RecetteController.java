@@ -15,7 +15,7 @@ import co.simplon.glycelife.app.model.Recette;
 import co.simplon.glycelife.app.service.PortionServiceImpl;
 import co.simplon.glycelife.app.service.RecetteServiceImpl;
 
-@CrossOrigin(origins = "http://localhost/4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/mes-recettes")
 public class RecetteController {
