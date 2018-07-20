@@ -17,7 +17,7 @@ import co.simplon.glycelife.app.service.RecetteServiceImpl;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/mes-recettes")
+@RequestMapping("/recettes")
 public class RecetteController {
 
 	private RecetteServiceImpl recetteService;
