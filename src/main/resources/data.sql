@@ -1055,3 +1055,13 @@ INSERT INTO PUBLIC.ALIMENT(ID, CARB, CG, ENERGY, FIBRE, IG, LIPID, NAME, PROTEIN
 (HIBERNATE_SEQUENCE.nextval, 89.2,89.2,362,0.8,100,0.25,'Amidon de maïs ou fécule de maïs',0.43,0.019,0.0,10),
 (HIBERNATE_SEQUENCE.nextval, 2.7,2.97,37,0.0,110,0.0,'Bière "coeur de marché" (4-5° alcool)',0.39,0.0047,0.0,1)
 ;
+INSERT INTO PUBLIC.RECETTE(NAME, ID, COMMENT, ENERGY, CG, PROTEIN, CARB, LIPID, FIBRE, SUGAR, SALT) VALUES
+('recetteName0' , 1,'commentaire0', 0, 0, 0, 0, 0, 0, 0, 0),
+('recette1' , 2,'commentaire1', 1, 0, 0, 6, 0, 0, 0, 0)
+;
+INSERT INTO PUBLIC.PORTION(ID, QUANTITY, FK_IDALIMENT, FK_IDRECETTE) VALUES
+(1, 100, 1, 1),
+(2, 300, 2, 1),
+(3, 20, 3, 2),
+(4, 45, 4, 2)
+;
