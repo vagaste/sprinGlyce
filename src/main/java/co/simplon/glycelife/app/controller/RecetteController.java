@@ -38,13 +38,13 @@ public class RecetteController {
 	@RequestMapping("/save")
 	@PostMapping
 	@Transactional
-	public String create(@ModelAttribute Recette recette, @ModelAttribute List<Portion> portions) {
+	public String create(@ModelAttribute Recette recette) {
 		try {
 			recetteService.saveRecette(recette);
-			for (Portion portion : portions) {
+			for (Portion portion : recette.getPortions()) {
 				portionService.savePortion(portion);
 			}
-			return "La recette, " + recette.getName() + "id= " + recette.getId() + "a bien été enregistrée.";
+			return "La recette " + recette.getName() + ", id= " + recette.getId() + "a bien été enregistrée.";
 		} catch (Exception e) {
 			return "Nous n'avons pas pu enregistrer cette recette :-(." + e;
 		}
