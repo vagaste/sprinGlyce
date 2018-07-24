@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,13 +39,14 @@ public class RecetteController {
 	@RequestMapping("/save")
 	@PostMapping
 	@Transactional
-	public String create(@ModelAttribute Recette recette) {
+	// public String create(@ModelAttribute Recette recette) {
+	public String create(@RequestBody Recette recette) {
 		try {
 			recetteService.saveRecette(recette);
 			for (Portion portion : recette.getPortions()) {
 				portionService.savePortion(portion);
 			}
-			return "La recette " + recette.getName() + ", id= " + recette.getId() + "a bien été enregistrée.";
+			return "La recette " + recette.getName() + ", id= " + recette.getId() + " a bien été enregistrée.";
 		} catch (Exception e) {
 			return "Nous n'avons pas pu enregistrer cette recette :-(." + e;
 		}

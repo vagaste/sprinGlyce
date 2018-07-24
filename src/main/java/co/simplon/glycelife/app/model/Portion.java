@@ -2,12 +2,14 @@ package co.simplon.glycelife.app.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.ForeignKey;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -28,7 +30,7 @@ public class Portion {
 	private Aliment aliment;
 
 	@ManyToOne
-	@JoinColumn(name = "fk_idrecette")
+	@JoinColumn(name = "fk_idrecette", foreignKey = @ForeignKey(name = "fk_idrecette"))
 	@JsonIgnore
 	private Recette recette;
 
