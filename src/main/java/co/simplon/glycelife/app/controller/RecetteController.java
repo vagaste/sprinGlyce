@@ -43,7 +43,9 @@ public class RecetteController {
 	public Recette create(@RequestBody Recette recette) {
 		try {
 			recetteService.saveRecette(recette);
+			System.out.println(recette.getId());
 			for (Portion portion : recette.getPortions()) {
+				portion.setRecette(recette);
 				portionService.savePortion(portion);
 			}
 			return recette;
