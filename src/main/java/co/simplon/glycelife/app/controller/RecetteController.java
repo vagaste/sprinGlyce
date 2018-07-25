@@ -40,15 +40,15 @@ public class RecetteController {
 	@PostMapping
 	@Transactional
 	// public String create(@ModelAttribute Recette recette) {
-	public String create(@RequestBody Recette recette) {
+	public Recette create(@RequestBody Recette recette) {
 		try {
 			recetteService.saveRecette(recette);
 			for (Portion portion : recette.getPortions()) {
 				portionService.savePortion(portion);
 			}
-			return "La recette " + recette.getName() + ", id= " + recette.getId() + " a bien été enregistrée.";
+			return recette;
 		} catch (Exception e) {
-			return "Nous n'avons pas pu enregistrer cette recette :-(." + e;
+			return null;
 		}
 	}
 
