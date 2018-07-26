@@ -8,4 +8,5 @@ import co.simplon.glycelife.app.model.Recette;
 @Repository
 public interface RecetteRepo extends JpaRepository<Recette, Long> {
 
+	
 }

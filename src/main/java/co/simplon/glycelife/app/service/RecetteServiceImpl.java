@@ -26,4 +26,10 @@ public class RecetteServiceImpl implements RecetteService {
 		return r7Repo.save(recette);
 	}
 
+	@Override
+	public void removeById(Long id) {
+		r7Repo.deleteById(id);
+		
+	}
+
 }

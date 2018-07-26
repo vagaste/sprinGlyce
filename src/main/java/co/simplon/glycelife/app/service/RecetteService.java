@@ -12,4 +12,7 @@ public interface RecetteService {
 	public List<Recette> getAll();
 
 	public Recette saveRecette(Recette recette);
+	
+	public void removeById(Long id);
+	
 }
