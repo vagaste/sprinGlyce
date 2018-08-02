@@ -17,7 +17,7 @@ This feature allows you to save this data for later viewing.
 For developpers, you can access to developpers Guide [here](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
 
 ## Deployment guide
-To deploy, you can access to deployment guide [here] (https://github.com/vagaste/sprinGlyce/blob/master/GLYCE%20%26%20LIFE%20-%20manuel%20de%20d%C3%A9ploiement.odt)
+To deploy, you can access to deployment guide (https://github.com/vagaste/sprinGlyce/blob/master/GLYCE%20%26%20LIFE%20-%20manuel%20de%20d%C3%A9ploiement.odt)
 
 
 =================================================================================
