@@ -14,10 +14,16 @@ This feature allows you to save this data for later viewing.
 
 
 ## Guide access
+
+#### Users guide
+User notice available [here](https://github.com/vagaste/sprinGlyce/blob/master/USER_GUIDE.MD)
+
+#### Developper guide
 For developpers, you can access to developpers Guide [here](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
 
-## Deployment guide
-To deploy, you can access to deployment guide https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
+#### Deployment guide
+To deploy, you can access to deployment guide    
+https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
 
 
 =================================================================================
@@ -37,7 +43,13 @@ Une autre fonctionnalité permet de créer des recettes à base d'aliments simpl
 Cette fonctionnalité permet de sauvergarder ces données pour les visualiser ensuite.
 
 ## Guide access
+
+#### Guide utilisateurs
+La notice explicative réservée aux utilisateurs est visible [ici](https://github.com/vagaste/sprinGlyce/blob/master/USER_GUIDE.MD)
+
+#### Guide de Developpement 
 Pour les développeurs, l'acces au guide de développement se fait [ici](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
 
-## Deployment guide
-To deploy, you can access to deployment guide https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
+#### Guide de Déploiement
+To deploy, you can access to deployment guide    
+https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
