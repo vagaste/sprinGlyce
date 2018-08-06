@@ -49,7 +49,39 @@
   At right, the content of selected recipe. By default, the first recipe is showed.    
   ![RECIPE DETAIL](/guide_src/recipe_details.JPG)    
   
+    *2. RECETTE - recipe actions view or delete*
+    
+  To view details of a recipe, click on choosen recipe name, content of detail part will automatically update with recipe infos.    
+  To delete a recipe, click on trash right, all datas concerned by the selected recipe wil be erased.
+   ![RECIPE ACTIONS](/guide_src/recipe_delete_button.JPG)
+   
+    *3. RECETTE - Create new*
+    
+  The first recipe list item 'creer' permit to create a new recipe clicking icon.    
+  This action open a new main form with empty inputs.
+  To store a new recipe, you must enter a valid name for your recipe, and it must contain at least one portion of valid aliment.    
+  ![RECIPE FORM](/guide_src/recipe_creation_page.JPG)    
   
+  Start writting name clicking in recipe name input.    
+  ![RECIPE NAME](/guide_src/recipe_name.JPG)
+  
+  Add every parts of aliments. Type first letter of an aliment, then choose item in short list.    
+  ![ALIMENT NAME](/guide_src/portion_typing_zone.JPG)    
+  
+  Add quantity to this part, in qty input using arrows or writting value.    
+  As you have enter valid informations, you can click on add icon, part and global Glycemic Charge will be updated.
+  ![PART QUANTITY](/guide_src/portion_qty_value.JPG)    
+  
+  All parts added showed under in part table.
+  In case of mistake, each part added can be deleted, click on trash right, Global Glycemic Charge will be updated.    
+  ![PART ITEMS](/guide_src/portions_table.JPG)    
+  
+  
+  Write here some optional comments for this recipe.     
+  ![RECIPE COMMENT ZONE](/guide_src/recipe_comment_zone.JPG)  
     
-    
+  when each required field is filled, it becomes possible to save clicking save button.    
+  When new recipe is stored, you wil be automatically redirected to recipe main page and can view the new list item.    
+  ![PART ITEMS](/guide_src/recipe_save_button.JPG)  
+
   
