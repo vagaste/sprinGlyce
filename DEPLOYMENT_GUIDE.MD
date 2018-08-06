@@ -66,4 +66,4 @@ This table is updated whith the application GLYCE & LIFE.
 contains the name of the recipe and the overall value of glycemic load and nutritional values.    
 This table is updated whith the application GLYCE & LIFE.
 
-![CLASS DIAGRAM]()
+![CLASS DIAGRAM](/guide_src/diagram.JPG)
