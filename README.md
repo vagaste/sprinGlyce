@@ -16,14 +16,13 @@ This feature allows you to save this data for later viewing.
 ## Guide access
 
 #### Users guide
-User notice available [here](https://github.com/vagaste/sprinGlyce/blob/master/USER_GUIDE.MD)
+[User notice](https://github.com/vagaste/sprinGlyce/blob/master/USER_GUIDE.MD) available.
 
 #### Developper guide
-For developpers, you can access to developpers Guide [here](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
+For developpers, you can access to [developpers Guide](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
 
 #### Deployment guide
-To deploy, you can access to deployment guide    
-https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
+To deploy, you can access to [deployment guide](https://github.com/vagaste/sprinGlyce/blob/master/DEPLOYMENT_GUIDE.MD)
 
 
 =================================================================================
@@ -51,5 +50,4 @@ La notice explicative réservée aux utilisateurs est visible [ici](https://gith
 Pour les développeurs, l'acces au guide de développement se fait [ici](https://github.com/vagaste/sprinGlyce/blob/master/Developper_Guide.MD)
 
 #### Guide de Déploiement
-To deploy, you can access to deployment guide    
-https://github.com/vagaste/sprinGlyce/blob/master/Deployment%20guide%20-%20GLYCE%20%26%20LIFE.odt
+Pour le déploiment, cliquez sur le [guide de déploiment](https://github.com/vagaste/sprinGlyce/blob/master/DEPLOYMENT_GUIDE.MD)
